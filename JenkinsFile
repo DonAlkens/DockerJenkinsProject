@@ -36,7 +36,7 @@ node {
 
 	stage('Deploy') {
 
-		sh ("docker run -d -p 81:8000 -v /var/log/:/var/log/ ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
+		sh ("docker run -d -p 3000:3000 ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
 
 	}
 
