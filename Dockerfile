@@ -2,6 +2,6 @@ FROM nginx:latest
 
 COPY index.html  /var/www/html/
 
-EXPOSE 8000:80
+EXPOSE 80:80
 
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
