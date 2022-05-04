@@ -36,7 +36,7 @@ node {
 
 	stage('Deploy') {
 
-		sh ("docker run -d -p 20:8000 ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
+		sh ("docker run -d -p 82:8000 ${dockerhubaccountid}/${application}:${BUILD_NUMBER}")
 
 	}
 
