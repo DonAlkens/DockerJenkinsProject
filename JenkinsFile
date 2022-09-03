@@ -2,7 +2,7 @@ node {
 
 	def application = "dockerjenkinsapp"
 
-	def dockerhubaccountid = "donalkens"
+	def dockerhubaccountid = "iezdevops"
 
 	stage('Clone repository') {
 
@@ -22,7 +22,7 @@ node {
 
 	stage('Push image') {
 
-		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+		withDockerRegistry([ credentialsId: "dockerlogin", url: "" ]) {
 
 		app.push()
 
